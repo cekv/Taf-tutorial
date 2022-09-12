@@ -6,14 +6,16 @@ library(ggplot2)
 #get data
 data(trees)
 write.csv(cars, "cars.csv")
+write.csv(trees, "trees.csv")
 
+#Create the TAF skeleton R files
 taf.skeleton()
 
 #copy a file from a local source
 cp("cars.csv", "bootstrap/initial/data")
 
 
-# document
+# document data
 draft.data(
   data.files = "trees.csv",
   originator = "Ryan, T. A., Joiner, B. L. and Ryan, B. F. (1976) The Minitab Student Handbook. Duxbury Press.",
